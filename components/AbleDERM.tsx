@@ -10,6 +10,7 @@ export default function AbleDERM() {
   const heroRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
