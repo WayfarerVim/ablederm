@@ -678,7 +678,7 @@ export default function AbleDERM() {
       <footer style={{ background: '#2A1A1A', padding: '40px 32px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <img src="/Burgundy-logo.png" alt="AbleDERM" style={{ width: 32, height: 32, objectFit: 'contain' }} />
+            <img src="/Burgundy-logo.png" alt="AbleDERM" style={{ width: 48, height: 48, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 16, color: '#F9F7F4', fontWeight: 500 }}>AbleDERM</div>
               <div style={{ fontSize: 10, color: 'rgba(249,247,244,0.4)', letterSpacing: '0.12em' }}>Private Dermatology · Woking</div>
