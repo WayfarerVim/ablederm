@@ -309,7 +309,9 @@ export default function AbleDERM() {
               Doctor Led.
             </h1>
             <p className="fade-up-delay-2" style={{ fontSize: 16, lineHeight: 1.8, color: '#6B6060', maxWidth: 480, marginBottom: 40, fontWeight: 300 }}>
-              Private dermatology and aesthetic medicine delivered by Dr Anupama Lochab, GPwSI Dermatology, at our CQC-registered Woking practice. Precision diagnostics, evidence-based treatment, and genuinely personalised care.
+              Private Dermatology and Aesthetic Medicine delivered by Dr Anupama Lochab, GPwSI Dermatology, at our Bradstowe Surgery.
+<br /><br />
+Precision diagnostics, evidence-based treatment, and genuinely personalised care.
             </p>
             <div className="fade-up-delay-3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 48 }}>
               <a href="#contact" className="btn-primary">Book a Consultation <ArrowRight size={14} /></a>
