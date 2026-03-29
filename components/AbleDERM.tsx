@@ -337,7 +337,7 @@ export default function AbleDERM() {
                 </div>
               </div>
               <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid rgba(212,175,55,0.4)', zIndex: -1 }} />
-              <div style={{ position: 'absolute', bottom: -20, left: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
+              <div style={{ position: 'absolute', bottom: -20, right: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                   <Shield size={20} style={{ color: '#D4AF37' }} />
                   <div>
