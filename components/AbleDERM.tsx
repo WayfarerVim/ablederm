@@ -444,7 +444,7 @@ export default function AbleDERM() {
             <h2 className="serif" style={{ fontSize: 'clamp(34px, 4vw, 52px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>Physician-Administered Aesthetics</h2>
             <div className="gold-divider" style={{ margin: '16px auto 24px' }} />
             <p style={{ fontSize: 15, color: '#6B6060', maxWidth: 560, margin: '0 auto', lineHeight: 1.7, fontWeight: 300 }}>
-              All aesthetic procedures are performed by Dr Lochab — a medically trained clinician, not a beautician. Safety, subtlety, and natural results are non-negotiable.
+              All aesthetic procedures are performed by Dr Lochab — a medically trained expert-clinician. Safety, subtlety, and natural results are non-negotiable.
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }} className="aesthetics-grid">
