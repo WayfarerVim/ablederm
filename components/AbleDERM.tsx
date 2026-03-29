@@ -402,6 +402,19 @@ Precision diagnostics, evidence-based treatment, and genuinely personalised care
               </div>
             ))}
           </div>
+          <div style={{ marginTop: 32, textAlign: 'center' }}>
+            <a href="/gp-referrals" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 8,
+              background: '#3D2626', color: '#F9F7F4',
+              padding: '14px 32px', fontSize: 13, fontWeight: 500,
+              letterSpacing: '0.1em', textTransform: 'uppercase',
+              textDecoration: 'none', transition: 'background 0.3s',
+            }}>
+              GP Referral Information <ArrowRight size={14} />
+            </a>
+            </div>
+            ))}
+          </div>
         </div>
       </section>
 
