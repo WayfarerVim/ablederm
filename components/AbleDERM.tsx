@@ -551,7 +551,7 @@ export default function AbleDERM() {
           <div>
             <span className="section-label">About the Doctor</span>
             <h2 className="serif" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 400, color: '#3D2626', marginBottom: 8, lineHeight: 1.2 }}>Dr Anupama Lochab</h2>
-            <h3 className="serif" style={{ fontSize: 18, fontWeight: 300, color: '#8B5A5A', marginBottom: 24, fontStyle: 'italic' }}>GPwSI Dermatology, MBBS</h3>
+            <h3 className="serif" style={{ fontSize: 18, fontWeight: 300, color: '#8B5A5A', marginBottom: 24, fontStyle: 'italic' }}>GPwSI Dermatology, MBBS · MPH (USA) · MRCGP · PGDip (Dermatology)</h3>
             <div className="gold-divider" />
             <p style={{ fontSize: 14, lineHeight: 1.85, color: '#6B6060', fontWeight: 300, marginBottom: 20 }}>
               Dr Lochab is a GP with Special Interest in Dermatology, combining the breadth of general medicine with deep specialist expertise in skin disease. She trained in dermatology alongside her GP qualification and has been delivering consultant-standard skin care in private practice ever since.
