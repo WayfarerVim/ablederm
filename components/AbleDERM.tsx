@@ -554,7 +554,7 @@ export default function AbleDERM() {
             <h3 className="serif" style={{ fontSize: 18, fontWeight: 300, color: '#8B5A5A', marginBottom: 24, fontStyle: 'italic' }}>GPwSI Dermatology, MBBS · MPH (USA) · MRCGP · PGDip (Dermatology)</h3>
             <div className="gold-divider" />
             <p style={{ fontSize: 14, lineHeight: 1.85, color: '#6B6060', fontWeight: 300, marginBottom: 20 }}>
-              Dr Lochab is a GP with Special Interest in Dermatology, combining the breadth of general medicine with deep specialist expertise in skin disease. She trained in dermatology alongside her GP qualification and has been delivering consultant-standard skin care in private practice ever since.
+              Dr Lochab is a GP with Special Interest in Dermatology, combining the breadth of general medicine with deep specialist expertise in skin disease. She trained in dermatology post achieving her GP qualification and has been delivering expert skin care in private practice ever since.
             </p>
             <p style={{ fontSize: 14, lineHeight: 1.85, color: '#6B6060', fontWeight: 300, marginBottom: 32 }}>
               Working from Bradstowe Surgery in Woking — a CQC-registered practice — she offers the thoroughness and continuity of GP care with the precision of a dermatology specialist. Every patient leaves with a clear diagnosis, a written plan, and direct access for follow-up.
