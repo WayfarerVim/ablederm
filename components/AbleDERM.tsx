@@ -356,7 +356,7 @@ export default function AbleDERM() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 40, justifyContent: 'center', alignItems: 'center' }}>
           {[
             [Shield, 'CQC Registered Premises', 'Bradstowe Surgery, Woking'],
-            [Award, 'GPwSI Dermatology', 'Consultant-Grade Expertise'],
+            [Award, 'GPwSI Dermatology', 'Expert-led Medical care'],
             [CheckCircle2, 'Histology & Pathology', 'Lab-Confirmed Diagnoses'],
             [Star, 'PMI Recognised', 'All Major Health Insurers'],
           ].map(([Icon, title, sub]: any) => (
