@@ -298,11 +298,7 @@ export default function AbleDERM() {
           <div>
             <div className="fade-up">
               <span className="section-label"><strong style={{ fontWeight: 700, letterSpacing: '0.15em', color: '#D4AF37', fontSize: '14px' }}>Bradstowe Surgery</strong> · Woking, Surrey</span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
-                <Shield size={14} style={{ color: '#D4AF37' }} />
-                <span style={{ fontSize: 12, color: '#8B5A5A', letterSpacing: '0.05em' }}>Regulated by the Care Quality Commission</span>
               </div>
-            </div>
             <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(44px, 5vw, 68px)', fontWeight: 300, lineHeight: 1.1, color: '#3D2626', margin: '0 0 8px' }}>
               Expert Skin Care,
             </h1>
