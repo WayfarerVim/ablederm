@@ -306,7 +306,7 @@ export default function AbleDERM() {
               Expert Skin Care,
             </h1>
             <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(44px, 5vw, 68px)', fontWeight: 500, lineHeight: 1.1, color: '#6B3E3E', margin: '0 0 32px', fontStyle: 'italic' }}>
-              Doctor (GPwSI in Dermatology) Led.
+              Doctor Led.
             </h1>
             <p className="fade-up-delay-2" style={{ fontSize: 16, lineHeight: 1.8, color: '#6B6060', maxWidth: 480, marginBottom: 40, fontWeight: 300 }}>
               Private dermatology and aesthetic medicine delivered by Dr Anupama Lochab, GPwSI Dermatology, at our CQC-registered Woking practice. Precision diagnostics, evidence-based treatment, and genuinely personalised care.
