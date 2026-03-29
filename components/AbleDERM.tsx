@@ -344,15 +344,13 @@ export default function AbleDERM() {
 
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div style={{ position: 'relative' }}>
-              <div style={{ width: 380, height: 480, background: 'linear-gradient(160deg, #C4A4A4 0%, #8B5A5A 60%, #3D2626 100%)', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', padding: 32 }}>
-                  <img src={LOGO_SVG} alt="" style={{ width: 80, height: 80, opacity: 0.3, marginBottom: 'auto', marginTop: 40 }} />
-                  <div style={{ textAlign: 'center' }}>
-                    <div className="serif" style={{ fontSize: 20, color: '#F9F7F4', fontWeight: 400, marginBottom: 4 }}>Dr Anupama Lochab</div>
-                    <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.7)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>GPwSI Dermatology</div>
-                  </div>
-                </div>
-              </div>
+              <div style={{ width: 380, height: 480, position: 'relative', overflow: 'hidden' }}>
+  <img src="/Anupama photo for website.jpeg" alt="Dr Anupama Lochab" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 24px 20px', background: 'linear-gradient(to top, rgba(61,38,38,0.85) 0%, transparent 100%)' }}>
+    <div className="serif" style={{ fontSize: 20, color: '#F9F7F4', fontWeight: 400, marginBottom: 4 }}>Dr Anupama Lochab</div>
+    <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.7)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>GPwSI Dermatology</div>
+  </div>
+</div>
               <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid rgba(212,175,55,0.4)', zIndex: -1 }} />
               <div style={{ position: 'absolute', bottom: -20, left: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
