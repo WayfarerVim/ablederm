@@ -58,7 +58,7 @@ export default function AbleDERM() {
 
   const faqs = [
     { q: 'Do I need a GP referral?', a: 'No referral is required for self-pay patients. You can book directly via our online booking system or by calling the practice. We accept GP referral letters but they are not mandatory.' },
-    { q: 'Is the practice CQC registered?', a: "Yes. AbleDERM operates within Bradstowe Surgery, a fully CQC-registered premises in Woking, Surrey. All consultations are conducted under the surgery's CQC registration, providing the highest standard of regulated care." },
+    { q: 'Is the practice CQC registered?', a: "Yes. AbleDERM operates within BRADSTOWE Surgery, a fully CQC-registered premises in Woking, Surrey. All consultations are conducted under the surgery's CQC registration, providing the highest standard of regulated care." },
     { q: 'What should I bring to my appointment?', a: 'Please bring a list of any current medications, details of any previous skin treatments or biopsies, and if applicable, any referral letters or dermatology reports. Wear minimal makeup to allow full skin examination.' },
     { q: 'Do you treat children?', a: 'Dr Lochab sees patients aged 18 and over for aesthetic consultations, and all ages for medical dermatology conditions with parental consent for under-18s.' },
   ];
