@@ -32,22 +32,22 @@ export default function AbleDERM() {
 
   const pricingTiers = [
     {
-      name: 'Initial Consultation',
-      price: '£180',
+      name: 'Dermatology Consultation',
+      price: '£220',
       desc: 'Comprehensive first assessment',
       features: ['60-minute consultation', 'Full skin examination', 'Personalised treatment plan', 'Written summary provided', 'Follow-up guidance'],
       highlight: false,
     },
     {
       name: 'Follow-Up',
-      price: '£95',
+      price: '£160',
       desc: 'Review & treatment adjustment',
       features: ['30-minute review', 'Treatment monitoring', 'Prescription renewal', 'Progress photography', 'Plan refinement'],
       highlight: true,
     },
     {
       name: 'Minor Surgery',
-      price: 'From £350',
+      price: 'From £480',
       desc: 'Lesion removal & procedures',
       features: ['Pre-op assessment included', 'Local anaesthesia', 'Histology if required', 'Wound care guidance', 'Post-op review'],
       highlight: false,
@@ -310,8 +310,8 @@ export default function AbleDERM() {
             </h1>
             <p className="fade-up-delay-2" style={{ fontSize: 16, lineHeight: 1.8, color: '#6B6060', maxWidth: 480, marginBottom: 40, fontWeight: 300 }}>
               Private Dermatology and Aesthetic Medicine delivered by Dr Anupama Lochab, GPwSI Dermatology, at our Bradstowe Surgery.
-<br /><br />
-Precision diagnostics, evidence-based treatment, and genuinely personalised care.
+              <br /><br />
+              Precision diagnostics, evidence-based treatment, and genuinely personalised care.
             </p>
             <div className="fade-up-delay-3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 48 }}>
               <a href="#contact" className="btn-primary">Book a Consultation <ArrowRight size={14} /></a>
@@ -412,8 +412,6 @@ Precision diagnostics, evidence-based treatment, and genuinely personalised care
             }}>
               GP Referral Information <ArrowRight size={14} />
             </a>
-            </div>
-            ))}
           </div>
         </div>
       </section>
@@ -627,7 +625,7 @@ Precision diagnostics, evidence-based treatment, and genuinely personalised care
               {[
                 [MapPin, 'Bradstowe Surgery, Woking, Surrey', 'CQC Registered Premises'],
                 [Phone, '01483 xxx xxx', 'Mon–Fri 9am–5pm'],
-                [Mail, 'hello@abledrm.co.uk', 'We respond within 24 hours'],
+                [Mail, 'info@ablederm.health', 'We respond within 24 hours'],
                 [Clock, 'Tuesday & Thursday', 'Private clinic days'],
               ].map(([Icon, line1, line2]: any) => (
                 <div key={line1} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
@@ -698,4 +696,4 @@ Precision diagnostics, evidence-based treatment, and genuinely personalised care
 
     </div>
   );
-}
+}       
