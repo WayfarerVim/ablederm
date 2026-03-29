@@ -297,7 +297,7 @@ export default function AbleDERM() {
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '80px 32px', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="hero-grid">
           <div>
             <div className="fade-up">
-              <span className="section-label"><strong style={{ fontWeight: 700, letterSpacing: '0.15em', color: '#D4AF37' }}>Bradstowe Surgery</strong> · Woking, Surrey</span>
+              <span className="section-label"><strong style={{ fontWeight: 700, letterSpacing: '0.15em', color: '#D4AF37', fontSize: '14px' }}>Bradstowe Surgery</strong> · Woking, Surrey</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
                 <Shield size={14} style={{ color: '#D4AF37' }} />
                 <span style={{ fontSize: 12, color: '#8B5A5A', letterSpacing: '0.05em' }}>Regulated by the Care Quality Commission</span>
