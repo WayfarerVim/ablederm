@@ -1,0 +1,118 @@
+/* ------------------------------
+   MEN’S PALETTE TOKENS
+   ------------------------------ */
+
+:root {
+  --men-graphite: #2A2D31;     /* Primary heading colour */
+  --men-steel: #5A6A75;        /* Secondary text */
+  --men-concrete: #D9D9D6;     /* Soft neutral background */
+  --men-cream: #F7F4EF;        /* Shared AbleDERM neutral */
+}
+
+/* ------------------------------
+   PAGE LAYOUT
+   ------------------------------ */
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background: var(--men-cream);
+}
+
+/* ------------------------------
+   HERO
+   ------------------------------ */
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--men-graphite);
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--men-steel);
+  max-width: 600px;
+}
+
+/* ------------------------------
+   SECTIONS
+   ------------------------------ */
+
+.section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--men-concrete);
+  border-radius: 8px;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--men-graphite);
+  margin-bottom: 1.5rem;
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ------------------------------
+   CONDITION BLOCKS
+   ------------------------------ */
+
+.condition {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.conditionTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--men-graphite);
+}
+
+.body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--men-steel);
+}
+
+.list {
+  padding-left: 1.25rem;
+  color: var(--men-steel);
+  line-height: 1.5;
+}
+
+/* ------------------------------
+   CTA
+   ------------------------------ */
+
+.ctaSection {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: var(--men-graphite);
+  color: var(--men-cream);
+  padding: 0.9rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.ctaButton:hover {
+  opacity: 0.85;
+}
