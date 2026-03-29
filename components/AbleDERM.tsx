@@ -631,7 +631,7 @@ export default function AbleDERM() {
               {[
                 [MapPin, 'Bradstowe Surgery, Woking, Surrey', 'CQC Registered Premises'],
                 [Phone, '01483 xxx xxx', 'Mon–Fri 9am–5pm'],
-                [Mail, 'hello@abledrm.co.uk', 'We respond within 24 hours'],
+                [Mail, 'info@ablederm.health', 'We respond within 24 hours'],
                 [Clock, 'Tuesday & Thursday', 'Private clinic days'],
               ].map(([Icon, line1, line2]: any) => (
                 <div key={line1} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
