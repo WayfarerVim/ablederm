@@ -627,6 +627,7 @@ export default function AbleDERM() {
                 [Phone, '01483 xxx xxx', 'Mon–Fri 9am–5pm'],
                 [Mail, 'info@ablederm.health', 'We respond within 24 hours'],
                 [Clock, 'Tuesday & Thursday', 'Private clinic days'],
+[Monitor, 'Online Booking 24/7', 'Book instantly via Semble · Powered by Heidi AI'],
               ].map(([Icon, line1, line2]: any) => (
                 <div key={line1} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <div style={{ width: 40, height: 40, border: '1px solid rgba(212,175,55,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
