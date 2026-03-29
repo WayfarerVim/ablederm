@@ -1,3 +1,6 @@
-import AbleDERM from './AbleDERM';
+'use client';
+import AbleDERM from '../components/AbleDERM';
 
-export default AbleDERM;
+export default function Home() {
+  return <AbleDERM />;
+}
