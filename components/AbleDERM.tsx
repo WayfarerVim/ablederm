@@ -59,7 +59,7 @@ export default function AbleDERM() {
 
   const faqs = [
     { q: 'Do I need a GP referral?', a: 'No referral is required for self-pay patients. You can book directly via our online booking system or by calling the practice. We accept GP referral letters but they are not mandatory.' },
-    { q: 'Is the practice CQC registered?', a: "Yes. AbleDERM operates within BRADSTOWE Surgery, a fully CQC-registered premises in Woking, Surrey. All consultations are conducted under the surgery's CQC registration, providing the highest standard of regulated care." },
+    { q: 'Is the practice CQC registered?', a: "Yes. AbleDERM operates within Bradstowe Surgery, a fully CQC-registered premises in Woking, Surrey. All consultations are conducted under the surgery's CQC registration, providing the highest standard of regulated care." },
     { q: 'What should I bring to my appointment?', a: 'Please bring a list of any current medications, details of any previous skin treatments or biopsies, and if applicable, any referral letters or dermatology reports. Wear minimal makeup to allow full skin examination.' },
     { q: 'Do you treat children?', a: 'Dr Lochab sees patients aged 18 and over for aesthetic consultations, and all ages for medical dermatology conditions with parental consent for under-18s.' },
   ];
@@ -84,6 +84,7 @@ export default function AbleDERM() {
           --text-muted: #6B6060;
         }
 
+        *, *::before, *::after { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
 
@@ -157,10 +158,7 @@ export default function AbleDERM() {
           transition: all 0.25s;
           cursor: default;
         }
-        .condition-tag:hover {
-          background: rgba(107,62,62,0.12);
-          border-color: rgba(107,62,62,0.3);
-        }
+        .condition-tag:hover { background: rgba(107,62,62,0.12); border-color: rgba(107,62,62,0.3); }
 
         .aesthetic-card {
           padding: 28px;
@@ -188,16 +186,9 @@ export default function AbleDERM() {
           background: var(--burg-deep);
           color: var(--cream);
         }
-        .pricing-card:not(.featured):hover {
-          box-shadow: 0 16px 48px rgba(61,38,38,0.1);
-        }
+        .pricing-card:not(.featured):hover { box-shadow: 0 16px 48px rgba(61,38,38,0.1); }
 
-        .gold-divider {
-          width: 48px;
-          height: 1px;
-          background: var(--gold);
-          margin: 16px 0 24px;
-        }
+        .gold-divider { width: 48px; height: 1px; background: var(--gold); margin: 16px 0 24px; }
 
         .section-label {
           font-size: 11px;
@@ -209,9 +200,7 @@ export default function AbleDERM() {
           display: block;
         }
 
-        .faq-item {
-          border-bottom: 1px solid rgba(107,62,62,0.12);
-        }
+        .faq-item { border-bottom: 1px solid rgba(107,62,62,0.12); }
         .faq-toggle {
           width: 100%;
           background: none;
@@ -227,11 +216,7 @@ export default function AbleDERM() {
           font-weight: 500;
           color: var(--burg-deep);
         }
-        .faq-toggle svg {
-          flex-shrink: 0;
-          transition: transform 0.3s;
-          color: var(--burg);
-        }
+        .faq-toggle svg { flex-shrink: 0; transition: transform 0.3s; color: var(--burg); }
         .faq-answer {
           overflow: hidden;
           transition: max-height 0.35s ease;
@@ -250,12 +235,40 @@ export default function AbleDERM() {
         .fade-up-delay-2 { animation: fadeUp 0.8s ease 0.3s forwards; opacity: 0; }
         .fade-up-delay-3 { animation: fadeUp 0.8s ease 0.45s forwards; opacity: 0; }
 
+        .mobile-menu {
+          display: none;
+          flex-direction: column;
+          background: #F9F7F4;
+          border-top: 1px solid rgba(107,62,62,0.12);
+          padding: 16px 24px 24px;
+          gap: 16px;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+          color: var(--burg);
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 500;
+          padding: 10px 0;
+          border-bottom: 1px solid rgba(107,62,62,0.08);
+        }
+
         @media (max-width: 768px) {
-          .hero-grid { grid-template-columns: 1fr !important; }
-          .pricing-grid { grid-template-columns: 1fr !important; }
-          .aesthetics-grid { grid-template-columns: 1fr !important; }
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+          .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 20px !important; }
+          .hero-photo { width: 100% !important; height: 300px !important; }
+          .hero-photo img { width: 100% !important; height: 100% !important; }
+          .hero-stats { gap: 16px !important; }
+          .pricing-grid { grid-template-columns: 1fr !important; }
+          .aesthetics-grid { grid-template-columns: 1fr !important; }
+          .conditions-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+          .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+          .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+          .trust-bar { gap: 20px !important; justify-content: flex-start !important; }
+          .section-pad { padding: 60px 20px !important; }
+          .footer-inner { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+          .cqc-badge { display: none !important; }
         }
       `}</style>
 
@@ -263,13 +276,13 @@ export default function AbleDERM() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         transition: 'all 0.4s ease',
-        backgroundColor: scrolled ? 'rgba(249,247,244,0.97)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(107,62,62,0.12)' : 'none',
+        backgroundColor: scrolled ? 'rgba(249,247,244,0.97)' : 'rgba(249,247,244,0.97)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(107,62,62,0.12)',
       }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 68 : 80, transition: 'height 0.4s' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72, transition: 'height 0.4s' }}>
           <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-            <img src="/Burgundy-logo.png" alt="AbleDERM logo" style={{ width: 72, height: 72, objectFit: 'contain' }} />
+            <img src="/Burgundy-logo.png" alt="AbleDERM logo" style={{ width: 64, height: 64, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 22, fontWeight: 600, color: '#3D2626', letterSpacing: '0.02em', lineHeight: 1.1 }}>AbleDERM</div>
               <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A', fontWeight: 400 }}>Private Dermatology</div>
@@ -281,40 +294,44 @@ export default function AbleDERM() {
             ))}
             <a href="#contact" className="btn-primary" style={{ padding: '10px 22px', fontSize: 12 }}>Book Now</a>
           </div>
-          <button onClick={() => setMenuOpen(!menuOpen)} style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', color: '#6B3E3E' }} className="mobile-menu-btn">
+          <button onClick={() => setMenuOpen(!menuOpen)} style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', color: '#6B3E3E', padding: 8 }} className="mobile-menu-btn">
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+        <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+          {['Services', 'Conditions', 'Pricing', 'About', 'Contact'].map(item => (
+            <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>
+          ))}
+          <a href="#contact" className="btn-primary" style={{ marginTop: 8, justifyContent: 'center' }} onClick={() => setMenuOpen(false)}>Book Now</a>
         </div>
       </nav>
 
       {/* HERO */}
-      <section id="home" ref={heroRef} style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', paddingTop: 80 }}>
+      <section id="home" ref={heroRef} style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden', paddingTop: 72 }}>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #F9F7F4 0%, #F0EBE3 50%, #E8DFD3 100%)' }} />
         <div style={{ position: 'absolute', top: 0, right: 0, width: '45%', height: '100%', background: 'linear-gradient(225deg, rgba(107,62,62,0.08) 0%, transparent 60%)' }} />
-        <div style={{ position: 'absolute', bottom: -80, right: -80, width: 480, height: 480, borderRadius: '50%', border: '1px solid rgba(107,62,62,0.08)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', bottom: -40, right: -40, width: 360, height: 360, borderRadius: '50%', border: '1px solid rgba(212,175,55,0.12)', pointerEvents: 'none' }} />
 
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '80px 32px', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="hero-grid">
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '60px 24px', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="hero-grid">
           <div>
             <div className="fade-up">
               <span className="section-label"><strong style={{ fontWeight: 700, letterSpacing: '0.15em', color: '#D4AF37', fontSize: '14px' }}>Bradstowe Surgery</strong> · Woking, Surrey</span>
-              </div>
-            <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(44px, 5vw, 68px)', fontWeight: 300, lineHeight: 1.1, color: '#3D2626', margin: '0 0 8px' }}>
+            </div>
+            <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(36px, 5vw, 68px)', fontWeight: 300, lineHeight: 1.1, color: '#3D2626', margin: '0 0 8px' }}>
               Expert Skin Care,
             </h1>
-            <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(44px, 5vw, 68px)', fontWeight: 500, lineHeight: 1.1, color: '#6B3E3E', margin: '0 0 32px', fontStyle: 'italic' }}>
+            <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(36px, 5vw, 68px)', fontWeight: 500, lineHeight: 1.1, color: '#6B3E3E', margin: '0 0 32px', fontStyle: 'italic' }}>
               Doctor Led.
             </h1>
-            <p className="fade-up-delay-2" style={{ fontSize: 16, lineHeight: 1.8, color: '#6B6060', maxWidth: 480, marginBottom: 40, fontWeight: 300 }}>
+            <p className="fade-up-delay-2" style={{ fontSize: 15, lineHeight: 1.8, color: '#6B6060', maxWidth: 480, marginBottom: 40, fontWeight: 300 }}>
               Private Dermatology and Aesthetic Medicine delivered by Dr Anupama Lochab, GPwSI Dermatology, at our Bradstowe Surgery.
               <br /><br />
               Precision diagnostics, evidence-based treatment, and genuinely personalised care.
             </p>
-            <div className="fade-up-delay-3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 48 }}>
+            <div className="fade-up-delay-3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 40 }}>
               <a href="#contact" className="btn-primary">Book a Consultation <ArrowRight size={14} /></a>
               <a href="#services" className="btn-ghost">Our Services</a>
             </div>
-            <div className="fade-up-delay-3" style={{ display: 'flex', gap: 32, paddingTop: 32, borderTop: '1px solid rgba(107,62,62,0.12)' }}>
+            <div className="fade-up-delay-3 hero-stats" style={{ display: 'flex', gap: 32, paddingTop: 32, borderTop: '1px solid rgba(107,62,62,0.12)', flexWrap: 'wrap' }}>
               {[['GPwSI', 'Qualified Dermatologist'], ['CQC', 'Regulated Practice'], ['PMI', 'All Major Insurers']].map(([title, sub]) => (
                 <div key={title}>
                   <div className="serif" style={{ fontSize: 22, fontWeight: 500, color: '#3D2626' }}>{title}</div>
@@ -325,16 +342,16 @@ export default function AbleDERM() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div style={{ position: 'relative' }}>
-              <div style={{ width: 380, height: 480, position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: 380 }}>
+              <div className="hero-photo" style={{ width: '100%', height: 480, position: 'relative', overflow: 'hidden' }}>
                 <img src="/drlochab-photo.jpeg" alt="Dr Anupama Lochab" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 24px 20px', background: 'linear-gradient(to top, rgba(61,38,38,0.85) 0%, transparent 100%)' }}>
                   <div className="serif" style={{ fontSize: 20, color: '#F9F7F4', fontWeight: 400, marginBottom: 4 }}>Dr Anupama Lochab</div>
                   <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.7)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>GPwSI Dermatology</div>
                 </div>
               </div>
-              <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid rgba(212,175,55,0.4)', zIndex: -1 }} />
-              <div style={{ position: 'absolute', bottom: -20, right: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
+              <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid rgba(212,175,55,0.4)', zIndex: -1 }} className="cqc-badge" />
+              <div className="cqc-badge" style={{ position: 'absolute', bottom: -20, right: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                   <Shield size={20} style={{ color: '#D4AF37' }} />
                   <div>
@@ -349,8 +366,8 @@ export default function AbleDERM() {
       </section>
 
       {/* TRUST BAR */}
-      <section style={{ background: '#3D2626', padding: '28px 32px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 40, justifyContent: 'center', alignItems: 'center' }}>
+      <section style={{ background: '#3D2626', padding: '24px 24px' }}>
+        <div className="trust-bar" style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 32, justifyContent: 'center', alignItems: 'center' }}>
           {[
             [Shield, 'CQC Registered Premises', 'Bradstowe Surgery, Woking'],
             [Award, 'GPwSI Dermatology', 'Expert-led Medical care'],
@@ -369,14 +386,14 @@ export default function AbleDERM() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" style={{ padding: '100px 32px', backgroundColor: '#F9F7F4' }}>
+      <section id="services" className="section-pad" style={{ padding: '100px 24px', backgroundColor: '#F9F7F4' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <span className="section-label">What We Treat</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(34px, 4vw, 52px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>Our Services</h2>
+            <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>Our Services</h2>
             <div className="gold-divider" style={{ margin: '16px auto 0' }} />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 2 }}>
             {[
               { title: 'Medical Dermatology', desc: 'Comprehensive diagnosis and management of all skin conditions — from acne to skin cancer screening — using evidence-based protocols and the latest diagnostic technology.', icon: '🔬' },
               { title: 'Aesthetic Medicine', desc: 'Physician-administered aesthetic treatments for natural enhancement. Every procedure is underpinned by clinical training and a deep understanding of skin anatomy.', icon: '✦' },
@@ -384,17 +401,16 @@ export default function AbleDERM() {
               { title: 'Skincare Planning', desc: 'Bespoke prescription skincare programmes combining cosmeceuticals with lifestyle guidance, tailored to your skin type and long-term goals.', icon: '◇' },
             ].map((service, i) => (
               <div key={service.title} style={{
-                padding: '48px 36px',
+                padding: '40px 28px',
                 background: i % 2 === 0 ? '#fff' : '#F0EBE3',
                 borderBottom: '2px solid transparent',
                 transition: 'all 0.3s',
-                cursor: 'default',
               }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderBottomColor = '#D4AF37'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderBottomColor = 'transparent'; (e.currentTarget as HTMLDivElement).style.transform = 'none'; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderBottomColor = '#D4AF37'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderBottomColor = 'transparent'; }}
               >
                 <div style={{ fontSize: 28, marginBottom: 20 }}>{service.icon}</div>
-                <h3 className="serif" style={{ fontSize: 24, fontWeight: 500, color: '#3D2626', marginBottom: 16 }}>{service.title}</h3>
+                <h3 className="serif" style={{ fontSize: 22, fontWeight: 500, color: '#3D2626', marginBottom: 12 }}>{service.title}</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.8, color: '#6B6060', fontWeight: 300 }}>{service.desc}</p>
               </div>
             ))}
@@ -405,7 +421,7 @@ export default function AbleDERM() {
               background: '#3D2626', color: '#F9F7F4',
               padding: '14px 32px', fontSize: 13, fontWeight: 500,
               letterSpacing: '0.1em', textTransform: 'uppercase',
-              textDecoration: 'none', transition: 'background 0.3s',
+              textDecoration: 'none',
             }}>
               GP Referral Information <ArrowRight size={14} />
             </a>
@@ -414,12 +430,12 @@ export default function AbleDERM() {
       </section>
 
       {/* CONDITIONS */}
-      <section id="conditions" style={{ padding: '100px 32px', background: '#F0EBE3' }}>
+      <section id="conditions" className="section-pad" style={{ padding: '100px 24px', background: '#F0EBE3' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }} className="conditions-grid">
             <div>
               <span className="section-label">Expertise</span>
-              <h2 className="serif" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 400, color: '#3D2626', lineHeight: 1.2, margin: '0 0 20px' }}>Conditions We Treat</h2>
+              <h2 className="serif" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 400, color: '#3D2626', lineHeight: 1.2, margin: '0 0 20px' }}>Conditions We Treat</h2>
               <div className="gold-divider" />
               <p style={{ fontSize: 14, lineHeight: 1.8, color: '#6B6060', fontWeight: 300, marginBottom: 32 }}>
                 Dr Lochab manages the full breadth of dermatological presentations in adults and adolescents, from common to complex.
@@ -434,17 +450,17 @@ export default function AbleDERM() {
       </section>
 
       {/* AESTHETICS */}
-      <section style={{ padding: '100px 32px', backgroundColor: '#F9F7F4' }}>
+      <section className="section-pad" style={{ padding: '100px 24px', backgroundColor: '#F9F7F4' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <span className="section-label">Aesthetic Treatments</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(34px, 4vw, 52px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>Physician-Administered Aesthetics</h2>
+            <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>Physician-Administered Aesthetics</h2>
             <div className="gold-divider" style={{ margin: '16px auto 24px' }} />
             <p style={{ fontSize: 15, color: '#6B6060', maxWidth: 560, margin: '0 auto', lineHeight: 1.7, fontWeight: 300 }}>
               All aesthetic procedures are performed by Dr Lochab — a medically trained expert-clinician. Safety, subtlety, and natural results are non-negotiable.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }} className="aesthetics-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }} className="aesthetics-grid">
             {aesthetics.map(a => (
               <div key={a.name} className="aesthetic-card">
                 <div style={{ width: 32, height: 1, background: '#D4AF37', marginBottom: 20 }} />
@@ -457,11 +473,11 @@ export default function AbleDERM() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" style={{ padding: '100px 32px', background: '#3D2626' }}>
+      <section id="pricing" className="section-pad" style={{ padding: '100px 24px', background: '#3D2626' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <span style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#D4AF37', display: 'block', marginBottom: 12 }}>Transparent Pricing</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(34px, 4vw, 52px)', fontWeight: 400, color: '#F9F7F4', margin: 0 }}>Consultation Fees</h2>
+            <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 400, color: '#F9F7F4', margin: 0 }}>Consultation Fees</h2>
             <div style={{ width: 48, height: 1, background: '#D4AF37', margin: '16px auto 0' }} />
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }} className="pricing-grid">
@@ -504,18 +520,18 @@ export default function AbleDERM() {
       </section>
 
       {/* CQC */}
-      <section style={{ padding: '100px 32px', background: '#F0EBE3' }}>
+      <section className="section-pad" style={{ padding: '100px 24px', background: '#F0EBE3' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
           <Shield size={40} style={{ color: '#D4AF37', marginBottom: 24 }} />
           <span className="section-label" style={{ display: 'block', marginBottom: 12 }}>Regulatory Assurance</span>
-          <h2 className="serif" style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 400, color: '#3D2626', marginBottom: 20 }}>CQC Registered & Fully Compliant</h2>
+          <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, color: '#3D2626', marginBottom: 20 }}>CQC Registered & Fully Compliant</h2>
           <div className="gold-divider" style={{ margin: '0 auto 28px' }} />
           <p style={{ fontSize: 15, lineHeight: 1.85, color: '#6B6060', fontWeight: 300, maxWidth: 680, margin: '0 auto 40px' }}>
             AbleDERM operates exclusively within the premises of Bradstowe Surgery, Woking — a fully registered and inspected Care Quality Commission (CQC) practice. Every consultation is delivered within a regulated clinical environment, with robust governance, patient safety systems, and clinical oversight built in as standard.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2, maxWidth: 700, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 2, maxWidth: 700, margin: '0 auto' }}>
             {['CQC Registered Premises', 'Clinical Governance', 'Patient Safety First', 'Insured & Indemnified'].map(point => (
-              <div key={point} style={{ background: '#fff', padding: '24px 20px', textAlign: 'center', borderBottom: '2px solid transparent', transition: 'border-color 0.3s' }}
+              <div key={point} style={{ background: '#fff', padding: '24px 16px', textAlign: 'center', borderBottom: '2px solid transparent', transition: 'border-color 0.3s' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderBottomColor = '#D4AF37'; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderBottomColor = 'transparent'; }}
               >
@@ -528,27 +544,26 @@ export default function AbleDERM() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" style={{ padding: '100px 32px', backgroundColor: '#F9F7F4' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+      <section id="about" className="section-pad" style={{ padding: '100px 24px', backgroundColor: '#F9F7F4' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="about-grid">
           <div style={{ position: 'relative' }}>
-            <div style={{ background: 'linear-gradient(135deg, #C4A4A4 0%, #8B5A5A 100%)', padding: '48px 40px', position: 'relative' }}>
-              <div className="serif" style={{ fontSize: 'clamp(28px, 3vw, 40px)', fontWeight: 300, color: '#F9F7F4', lineHeight: 1.4, fontStyle: 'italic' }}>
+            <div style={{ background: 'linear-gradient(135deg, #C4A4A4 0%, #8B5A5A 100%)', padding: '40px 32px', position: 'relative' }}>
+              <div className="serif" style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 300, color: '#F9F7F4', lineHeight: 1.4, fontStyle: 'italic' }}>
                 "Dermatology is not just about skin. It is about confidence, comfort, and quality of life."
               </div>
               <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 14 }}>
-                <div style={{ width: 36, height: 1, background: '#D4AF37' }} />
+                <div style={{ width: 36, height: 1, background: '#D4AF37', flexShrink: 0 }} />
                 <div>
                   <div style={{ fontSize: 13, fontWeight: 500, color: '#F9F7F4' }}>Dr Anupama Lochab</div>
                   <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.6)', letterSpacing: '0.08em' }}>GPwSI Dermatology</div>
                 </div>
               </div>
             </div>
-            <div style={{ position: 'absolute', top: 16, left: -16, right: 16, bottom: -16, border: '1px solid rgba(212,175,55,0.3)', zIndex: -1 }} />
           </div>
           <div>
             <span className="section-label">About the Doctor</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 400, color: '#3D2626', marginBottom: 8, lineHeight: 1.2 }}>Dr Anupama Lochab</h2>
-            <h3 className="serif" style={{ fontSize: 18, fontWeight: 300, color: '#8B5A5A', marginBottom: 24, fontStyle: 'italic' }}>GPwSI Dermatology, MBBS · MPH (USA) · MRCGP · PGDip (Dermatology)</h3>
+            <h2 className="serif" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 400, color: '#3D2626', marginBottom: 8, lineHeight: 1.2 }}>Dr Anupama Lochab</h2>
+            <h3 className="serif" style={{ fontSize: 16, fontWeight: 300, color: '#8B5A5A', marginBottom: 24, fontStyle: 'italic' }}>GPwSI Dermatology, MBBS · MPH (USA) · MRCGP · PGDip (Dermatology)</h3>
             <div className="gold-divider" />
             <p style={{ fontSize: 14, lineHeight: 1.85, color: '#6B6060', fontWeight: 300, marginBottom: 20 }}>
               Dr Lochab is a GP with Special Interest in Dermatology, combining the breadth of general medicine with deep specialist expertise in skin disease. She trained in dermatology post achieving her GP qualification and has been delivering expert skin care in private practice ever since.
@@ -569,15 +584,15 @@ export default function AbleDERM() {
       </section>
 
       {/* TECH */}
-      <section style={{ padding: '60px 32px', background: '#E8DFD3' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 40, justifyContent: 'space-between', alignItems: 'center' }}>
+      <section style={{ padding: '48px 24px', background: '#E8DFD3' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 32, justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <div style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A', marginBottom: 8 }}>Powered By</div>
-            <h3 className="serif" style={{ fontSize: 24, fontWeight: 400, color: '#3D2626', margin: 0 }}>Clinical Technology Stack</h3>
+            <h3 className="serif" style={{ fontSize: 22, fontWeight: 400, color: '#3D2626', margin: 0 }}>Clinical Technology Stack</h3>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
             {[['Semble', 'Secure EHR & Booking'], ['Heidi AI', 'Clinical Scribe'], ['Healthcode', 'PMI Billing']].map(([name, role]) => (
-              <div key={name} style={{ padding: '16px 24px', background: 'rgba(255,255,255,0.6)', borderLeft: '3px solid #D4AF37' }}>
+              <div key={name} style={{ padding: '14px 20px', background: 'rgba(255,255,255,0.6)', borderLeft: '3px solid #D4AF37' }}>
                 <div style={{ fontWeight: 500, fontSize: 14, color: '#3D2626' }}>{name}</div>
                 <div style={{ fontSize: 11, color: '#8B5A5A', marginTop: 2 }}>{role}</div>
               </div>
@@ -587,11 +602,11 @@ export default function AbleDERM() {
       </section>
 
       {/* FAQ */}
-      <section style={{ padding: '100px 32px', backgroundColor: '#F9F7F4' }}>
+      <section className="section-pad" style={{ padding: '100px 24px', backgroundColor: '#F9F7F4' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <span className="section-label">Common Questions</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>FAQs</h2>
+            <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, color: '#3D2626', margin: 0 }}>FAQs</h2>
             <div className="gold-divider" style={{ margin: '16px auto 0' }} />
           </div>
           {faqs.map((faq, i) => (
@@ -609,22 +624,22 @@ export default function AbleDERM() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" style={{ padding: '100px 32px', background: '#3D2626' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
+      <section id="contact" className="section-pad" style={{ padding: '100px 24px', background: '#3D2626' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64 }} className="contact-grid">
           <div>
             <span style={{ fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#D4AF37', display: 'block', marginBottom: 12 }}>Get in Touch</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(34px, 4vw, 52px)', fontWeight: 400, color: '#F9F7F4', margin: '0 0 20px', lineHeight: 1.2 }}>Book Your Consultation</h2>
+            <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 400, color: '#F9F7F4', margin: '0 0 20px', lineHeight: 1.2 }}>Book Your Consultation</h2>
             <div style={{ width: 48, height: 1, background: '#D4AF37', marginBottom: 32 }} />
             <p style={{ fontSize: 14, lineHeight: 1.85, color: 'rgba(249,247,244,0.65)', fontWeight: 300, marginBottom: 40 }}>
               To book an appointment with Dr Lochab, contact the practice directly or use our online booking system. New and returning patients are welcome — no GP referral required for self-pay.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
               {[
                 [MapPin, 'Bradstowe Surgery, Woking, Surrey', 'CQC Registered Premises'],
-                [Phone, '01483 xxx xxx', 'Mon–Fri 9am–5pm'],
+                [Phone, '01483 xxx xxx', 'Call us during clinic hours'],
                 [Mail, 'info@ablederm.health', 'We respond within 24 hours'],
                 [Clock, 'Tuesday & Thursday', 'Private clinic days'],
-[Monitor, 'Online Booking 24/7', 'Book instantly via Semble · Powered by Heidi AI'],
+                [Monitor, 'Online Booking 24/7', 'Book instantly via Semble · Powered by Heidi AI'],
               ].map(([Icon, line1, line2]: any) => (
                 <div key={line1} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <div style={{ width: 40, height: 40, border: '1px solid rgba(212,175,55,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -638,7 +653,7 @@ export default function AbleDERM() {
               ))}
             </div>
           </div>
-          <div style={{ background: 'rgba(249,247,244,0.05)', border: '1px solid rgba(249,247,244,0.08)', padding: '48px 40px' }}>
+          <div style={{ background: 'rgba(249,247,244,0.05)', border: '1px solid rgba(249,247,244,0.08)', padding: '40px 32px' }}>
             <h3 className="serif" style={{ fontSize: 24, fontWeight: 400, color: '#F9F7F4', marginBottom: 8 }}>Send an Enquiry</h3>
             <p style={{ fontSize: 13, color: 'rgba(249,247,244,0.5)', marginBottom: 32 }}>We will respond within one working day.</p>
             {[['Full Name', 'text', 'Your full name'], ['Email Address', 'email', 'your@email.com'], ['Phone Number', 'tel', 'Optional']].map(([label, type, placeholder]) => (
@@ -656,7 +671,7 @@ export default function AbleDERM() {
                 <option>Lesion Removal</option>
                 <option>PMI / Insurance Query</option>
                 <option>Skin Care Products</option>
-<option>Other</option>
+                <option>Other</option>
               </select>
             </div>
             <div style={{ marginBottom: 28 }}>
@@ -674,8 +689,8 @@ export default function AbleDERM() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: '#2A1A1A', padding: '40px 32px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'space-between', alignItems: 'center' }}>
+      <footer style={{ background: '#2A1A1A', padding: '32px 24px' }}>
+        <div className="footer-inner" style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <img src="/Burgundy-logo.png" alt="AbleDERM" style={{ width: 48, height: 48, objectFit: 'contain' }} />
             <div>
@@ -684,7 +699,7 @@ export default function AbleDERM() {
             </div>
           </div>
           <div style={{ fontSize: 12, color: 'rgba(249,247,244,0.35)', textAlign: 'center' }}>
-            © {new Date().getFullYear()} AbleDERM. All rights reserved. &nbsp;·&nbsp; CQC Compliant Private Medical Practice &nbsp;·&nbsp; Bradstowe Surgery
+            © {new Date().getFullYear()} AbleDERM. All rights reserved. · CQC Compliant · Bradstowe Surgery
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <Shield size={12} style={{ color: '#D4AF37' }} />
@@ -695,4 +710,4 @@ export default function AbleDERM() {
 
     </div>
   );
-}       
+}
