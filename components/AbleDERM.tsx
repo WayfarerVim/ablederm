@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone, Mail, MapPin, CheckCircle2, ChevronRight, Shield, Star, Award, Clock, ArrowRight, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, CheckCircle2, ChevronRight, Shield, Star, Award, Clock, ArrowRight, ChevronDown, Monitor } from 'lucide-react';
 
 export default function AbleDERM() {
   const [menuOpen, setMenuOpen] = useState(false);
