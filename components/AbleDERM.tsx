@@ -3,23 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone, Mail, MapPin, CheckCircle2, ChevronRight, Shield, Star, Award, Clock, ArrowRight, ChevronDown } from 'lucide-react';
 
-const LOGO_SVG = `data:image/svg+xml;base64,${btoa(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <defs>
-    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8B5A5A"/>
-      <stop offset="100%" stop-color="#3D2626"/>
-    </radialGradient>
-  </defs>
-  <circle cx="60" cy="60" r="56" fill="url(#g1)"/>
-  <ellipse cx="45" cy="60" rx="18" ry="26" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
-  <ellipse cx="75" cy="60" rx="18" ry="26" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
-  <path d="M52 44 Q60 38 68 44" fill="none" stroke="#F9F7F4" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M52 76 Q60 82 68 76" fill="none" stroke="#F9F7F4" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="60" cy="52" r="2.5" fill="#D4AF37"/>
-  <path d="M58 55 Q60 64 58 72" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M62 55 Q60 64 62 72" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-</svg>`)}`;
-
 export default function AbleDERM() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -285,7 +268,7 @@ export default function AbleDERM() {
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 68 : 80, transition: 'height 0.4s' }}>
           <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-            <img src={LOGO_SVG} alt="AbleDERM logo" style={{ width: 44, height: 44 }} />
+            <img src="/ablederm-logo-png.png" alt="AbleDERM logo" style={{ width: 44, height: 44, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 22, fontWeight: 600, color: '#3D2626', letterSpacing: '0.02em', lineHeight: 1.1 }}>AbleDERM</div>
               <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A', fontWeight: 400 }}>Private Dermatology</div>
@@ -345,12 +328,12 @@ export default function AbleDERM() {
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div style={{ position: 'relative' }}>
               <div style={{ width: 380, height: 480, position: 'relative', overflow: 'hidden' }}>
-  <img src="/Anupama photo for website.jpeg" alt="Dr Anupama Lochab" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
-  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 24px 20px', background: 'linear-gradient(to top, rgba(61,38,38,0.85) 0%, transparent 100%)' }}>
-    <div className="serif" style={{ fontSize: 20, color: '#F9F7F4', fontWeight: 400, marginBottom: 4 }}>Dr Anupama Lochab</div>
-    <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.7)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>GPwSI Dermatology</div>
-  </div>
-</div>
+                <img src="/drlochab-photo.jpeg" alt="Dr Anupama Lochab" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 24px 20px', background: 'linear-gradient(to top, rgba(61,38,38,0.85) 0%, transparent 100%)' }}>
+                  <div className="serif" style={{ fontSize: 20, color: '#F9F7F4', fontWeight: 400, marginBottom: 4 }}>Dr Anupama Lochab</div>
+                  <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.7)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>GPwSI Dermatology</div>
+                </div>
+              </div>
               <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid rgba(212,175,55,0.4)', zIndex: -1 }} />
               <div style={{ position: 'absolute', bottom: -20, left: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -629,7 +612,7 @@ export default function AbleDERM() {
               {[
                 [MapPin, 'Bradstowe Surgery, Woking, Surrey', 'CQC Registered Premises'],
                 [Phone, '01483 xxx xxx', 'Mon–Fri 9am–5pm'],
-                [Mail, 'info@ablederm.health', 'We respond within 24 hours'],
+                [Mail, 'hello@abledrm.co.uk', 'We respond within 24 hours'],
                 [Clock, 'Tuesday & Thursday', 'Private clinic days'],
               ].map(([Icon, line1, line2]: any) => (
                 <div key={line1} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
@@ -682,7 +665,7 @@ export default function AbleDERM() {
       <footer style={{ background: '#2A1A1A', padding: '40px 32px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <img src={LOGO_SVG} alt="" style={{ width: 32, height: 32 }} />
+            <img src="/ablederm-logo-png.png" alt="AbleDERM" style={{ width: 32, height: 32, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 16, color: '#F9F7F4', fontWeight: 500 }}>AbleDERM</div>
               <div style={{ fontSize: 10, color: 'rgba(249,247,244,0.4)', letterSpacing: '0.12em' }}>Private Dermatology · Woking</div>
