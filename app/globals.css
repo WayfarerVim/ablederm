@@ -1,0 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans), sans-serif;
+  background: #F9F7F4;
+  color: #3D3D3D;
+}
