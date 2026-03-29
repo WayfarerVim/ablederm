@@ -85,7 +85,7 @@ export default function GPReferrals() {
       <nav style={{ background: 'rgba(249,247,244,0.97)', borderBottom: '1px solid rgba(107,62,62,0.12)', padding: '0 32px', position: 'sticky', top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', height: 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-            <img src="/ablederm-logo-png.png" alt="AbleDERM" style={{ width: 40, height: 40, objectFit: 'contain' }} />
+            <img src="/Burgundy-logo.png" alt="AbleDERM" style={{ width: 40, height: 40, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 20, fontWeight: 600, color: '#3D2626', lineHeight: 1.1 }}>AbleDERM</div>
               <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A' }}>Private Dermatology</div>
@@ -258,7 +258,7 @@ export default function GPReferrals() {
       <footer style={{ background: '#2A1A1A', padding: '32px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <img src="/ablederm-logo-png.png" alt="" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+            <img src="/Burgundy-logo.png" alt="" style={{ width: 28, height: 28, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 15, color: '#F9F7F4', fontWeight: 500 }}>AbleDERM</div>
               <div style={{ fontSize: 10, color: 'rgba(249,247,244,0.4)', letterSpacing: '0.12em' }}>Private Dermatology · Woking</div>
