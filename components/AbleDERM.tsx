@@ -285,7 +285,7 @@ export default function AbleDERM() {
             <img src="/Burgundy-logo.png" alt="AbleDERM logo" style={{ width: 64, height: 64, objectFit: 'contain' }} />
             <div>
               <div className="serif" style={{ fontSize: 22, fontWeight: 600, color: '#3D2626', letterSpacing: '0.02em', lineHeight: 1.1 }}>AbleDERM</div>
-              <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A', fontWeight: 400 }}>Private Dermatology</div>
+              <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A', fontWeight: 400 }}>Dermatology & Aesthetic Medicine</div>
             </div>
           </a>
           <div style={{ display: 'flex', alignItems: 'center', gap: 36 }} className="desktop-nav">
