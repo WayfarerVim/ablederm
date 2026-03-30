@@ -307,60 +307,81 @@ export default function AbleDERM() {
       </nav>
 
       {/* HERO */}
-      <section id="home" ref={heroRef} style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden', paddingTop: 72 }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #F9F7F4 0%, #F0EBE3 50%, #E8DFD3 100%)' }} />
-        <div style={{ position: 'absolute', top: 0, right: 0, width: '45%', height: '100%', background: 'linear-gradient(225deg, rgba(107,62,62,0.08) 0%, transparent 60%)' }} />
-
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '60px 24px', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="hero-grid">
-          <div>
-            <div className="fade-up">
-              <span className="section-label"><strong style={{ fontWeight: 700, letterSpacing: '0.15em', color: '#D4AF37', fontSize: '14px' }}>Bradstowe Surgery</strong> · Woking, Surrey</span>
-            </div>
-            <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(36px, 5vw, 68px)', fontWeight: 300, lineHeight: 1.1, color: '#3D2626', margin: '0 0 8px' }}>
-              Expert Skin Care,
-            </h1>
-            <h1 className="serif fade-up-delay-1" style={{ fontSize: 'clamp(36px, 5vw, 68px)', fontWeight: 500, lineHeight: 1.1, color: '#6B3E3E', margin: '0 0 32px', fontStyle: 'italic' }}>
-              Doctor Led.
-            </h1>
-            <p className="fade-up-delay-2" style={{ fontSize: 15, lineHeight: 1.8, color: '#6B6060', maxWidth: 480, marginBottom: 40, fontWeight: 300 }}>
-              Private Dermatology and Aesthetic Medicine delivered by Dr Anupama Lochab, GPwSI Dermatology, at our Bradstowe Surgery.
-              <br /><br />
-              Precision diagnostics, evidence-based treatment, and genuinely personalised care.
-            </p>
-            <div className="fade-up-delay-3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 40 }}>
-              <a href="#contact" className="btn-primary">Book a Consultation <ArrowRight size={14} /></a>
-              <a href="#services" className="btn-ghost">Our Services</a>
-            </div>
-            <div className="fade-up-delay-3 hero-stats" style={{ display: 'flex', gap: 32, paddingTop: 32, borderTop: '1px solid rgba(107,62,62,0.12)', flexWrap: 'wrap' }}>
-              {[['GPwSI', 'Qualified Dermatologist'], ['CQC', 'Regulated Practice'], ['PMI', 'All Major Insurers']].map(([title, sub]) => (
-                <div key={title}>
-                  <div className="serif" style={{ fontSize: 22, fontWeight: 500, color: '#3D2626' }}>{title}</div>
-                  <div style={{ fontSize: 11, color: '#8B5A5A', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: 2 }}>{sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div style={{ position: 'relative', width: '100%', maxWidth: 380 }}>
-              <div className="hero-photo" style={{ width: '100%', height: 480, position: 'relative', overflow: 'hidden' }}>
-                <img src="/drlochab-photo.jpeg" alt="Dr Anupama Lochab" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 24px 20px', background: 'linear-gradient(to top, rgba(61,38,38,0.85) 0%, transparent 100%)' }}>
-                  <div className="serif" style={{ fontSize: 20, color: '#F9F7F4', fontWeight: 400, marginBottom: 4 }}>Dr Anupama Lochab</div>
-                  <div style={{ fontSize: 11, color: 'rgba(249,247,244,0.7)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>GPwSI Dermatology</div>
-                </div>
-              </div>
-              <div style={{ position: 'absolute', top: 16, left: 16, right: -16, bottom: -16, border: '1px solid rgba(212,175,55,0.4)', zIndex: -1 }} className="cqc-badge" />
-              <div className="cqc-badge" style={{ position: 'absolute', bottom: -20, right: -20, background: '#fff', border: '1px solid rgba(107,62,62,0.15)', padding: '14px 20px', boxShadow: '0 8px 32px rgba(61,38,38,0.1)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <Shield size={20} style={{ color: '#D4AF37' }} />
-                  <div>
-                    <div style={{ fontSize: 12, fontWeight: 500, color: '#3D2626' }}>CQC Compliant</div>
-                    <div style={{ fontSize: 10, color: '#8B5A5A', letterSpacing: '0.05em' }}>Regulated Practice</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <section id="home" ref={heroRef} style={{
+        minHeight: '500px',
+        backgroundImage: "url('/ablederm-banner.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden',
+        paddingTop: 72
+      }}>
+        <div style={{ textAlign: 'center', color: '#fff', maxWidth: '48rem', padding: '0 32px' }}>
+          <h1 className="serif" style={{
+            fontSize: 'clamp(32px, 5vw, 56px)',
+            fontWeight: 300,
+            lineHeight: 1.2,
+            marginBottom: '24px',
+            letterSpacing: '-0.5px'
+          }}>
+            Precision Dermatology<br />and Aesthetic Medicine
+          </h1>
+          <p style={{
+            fontSize: '18px',
+            fontWeight: 400,
+            lineHeight: 1.6,
+            marginBottom: '40px',
+            opacity: 0.9
+          }}>
+            Evidence-based care delivered with clarity, calm and clinical precision.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <a
+              href="/book"
+              style={{
+                padding: '12px 24px',
+                background: '#fff',
+                color: '#008080',
+                borderRadius: '6px',
+                fontSize: '14px',
+                fontWeight: 500,
+                textDecoration: 'none',
+                transition: 'background 0.3s',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#f0f0f0')}
+              onMouseLeave={e => (e.currentTarget.style.background = '#fff')}
+            >
+              Book Consultation
+            </a>
+            <a
+              href="/services"
+              style={{
+                padding: '12px 24px',
+                border: '1px solid #fff',
+                background: 'transparent',
+                color: '#fff',
+                borderRadius: '6px',
+                fontSize: '14px',
+                fontWeight: 500,
+                textDecoration: 'none',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = '#fff';
+                e.currentTarget.style.color = '#008080';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#fff';
+              }}
+            >
+              Explore Services
+            </a>
           </div>
         </div>
       </section>
