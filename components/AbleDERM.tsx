@@ -282,7 +282,7 @@ export default function AbleDERM() {
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72, transition: 'height 0.4s' }}>
           <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-            <img src="/Burgundy-logo.png" alt="AbleDERM logo" style={{ width: 64, height: 64, objectFit: 'contain' }} />
+            <img src="/Burgundy-logo.png" alt="AbleDERM logo" style={{ width: 64, height: 64, objectFit: 'contain', mixBlendMode: 'multiply' }} />
             <div>
               <div className="serif" style={{ fontSize: 22, fontWeight: 600, color: '#3D2626', letterSpacing: '0.02em', lineHeight: 1.1 }}>AbleDERM</div>
               <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8B5A5A', fontWeight: 400 }}>Private Dermatology</div>
@@ -713,7 +713,7 @@ export default function AbleDERM() {
       <footer style={{ background: '#2A1A1A', padding: '32px 24px' }}>
         <div className="footer-inner" style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <img src="/Burgundy-logo.png" alt="AbleDERM" style={{ width: 48, height: 48, objectFit: 'contain' }} />
+            <img src="/Burgundy-logo.png" alt="AbleDERM" style={{ width: 48, height: 48, objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
             <div>
               <div className="serif" style={{ fontSize: 16, color: '#F9F7F4', fontWeight: 500 }}>AbleDERM</div>
               <div style={{ fontSize: 10, color: 'rgba(249,247,244,0.4)', letterSpacing: '0.12em' }}>Private Dermatology · Woking</div>
